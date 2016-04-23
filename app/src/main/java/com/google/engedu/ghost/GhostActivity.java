@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -69,10 +70,19 @@ public class GhostActivity extends AppCompatActivity {
         onStart(null);
     }
 
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_ghost, menu);
+        if(!easy){
+            MenuItem item=menu.findItem(R.id.action_level);
+            item.setTitle(R.string.level_hard);
+        }
+        if(begin){
+            MenuItem item=menu.findItem(R.id.action_pos);
+            item.setTitle(R.string.begin);
+        }
         return true;
     }
 
@@ -117,14 +127,6 @@ public class GhostActivity extends AppCompatActivity {
         score.setText(savedInstanceState.getString(STATE_SCORE));
         easy=savedInstanceState.getBoolean(LEVEL);
         begin=savedInstanceState.getBoolean(POS);
-        if(!easy){
-            MenuItem item=(MenuItem)findViewById(R.id.action_level);
-            item.setTitle(R.string.level_hard);
-        }
-        if(begin){
-            MenuItem item=(MenuItem)findViewById(R.id.action_pos);
-            item.setTitle(R.string.begin);
-        }
     }
 
     private void computerTurn() {
