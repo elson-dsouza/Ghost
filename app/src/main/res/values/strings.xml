@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Ghost</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="level_easy">Level: Easy</string>
+    <string name="level_hard">Level: Hard</string>
+
+    <string name="end">Insert: End</string>
+    <string name="begin">Insert: Beginning</string>
+</resources>

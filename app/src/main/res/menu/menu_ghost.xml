@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".GhostActivity">
+    <item android:id="@+id/action_level" android:title="@string/level_easy"
+        android:orderInCategory="100" app:showAsAction="never"
+        />
+    <item android:id="@+id/action_pos" android:title="@string/end"
+        android:orderInCategory="100" app:showAsAction="never"
+        />
+</menu>
